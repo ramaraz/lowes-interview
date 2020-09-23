@@ -5,8 +5,9 @@ import {
 
 function NavBar() {
   const [navLinks] = useState([
-    { url: '/stores', name: "Lowe's stores" },
+    { url: '/stores', name: "Stores Location" },
     { url: '/loan-data', name: 'Loan Data' },
+    { url: '/earthquake', name: 'Earth Quake Graph' },
   ]);
   return (<div className="menu active">
     <ul>

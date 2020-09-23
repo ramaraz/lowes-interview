@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { useTable } from 'react-table'
 import csv from "csvtojson";
@@ -44,7 +43,7 @@ function Table({ columns, data }) {
   )
 }
 
-function Location1() {
+function LoanData() {
 
   const [result, setResult] = useState([]);
 
@@ -132,6 +131,4 @@ function Location1() {
   );
 }
 
-
-
-export default Location1;
+export default LoanData;

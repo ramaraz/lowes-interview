@@ -1,3 +1,12 @@
+# To start app on frontend
+npm install 
+npm start
+
+# backend
+npm install
+npm start
+
+
 # Overview
 
 This app contains 3 datasets set up to be returned on 3 separate API calls to the express.js server. Below is a basic description of each dataset along with the API call necessary to receive the data. You have 48 hours to use these datasets to show of your UI skills with

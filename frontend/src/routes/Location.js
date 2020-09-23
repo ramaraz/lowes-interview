@@ -8,7 +8,7 @@ import {
 } from "react-google-maps";
 import get from "lodash.get"
 
-const Location1 = compose(
+const LocationMap = compose(
   withProps({
     googleMapURL:
       "https://maps.googleapis.com/maps/api/js?key=AIzaSyAG_4QJNIEleAhb6yNgJ4FQ5xnGqzdbRqo&v=3.exp&libraries=geometry,drawing,places",
@@ -43,7 +43,7 @@ function Location() {
   }, [])
 
   return (
-    <Location1 marker={result} />
+    <LocationMap marker={result} />
   );
 }
 

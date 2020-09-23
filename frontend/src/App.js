@@ -3,7 +3,8 @@ import './App.scss';
 import { Route, Redirect, Switch, BrowserRouter as Router } from "react-router-dom";
 import Sidebar from './routes/Sidebar.js';
 import Location from './routes/Location.js';
-import Location1 from './routes/Location1.js';
+import LoanData from './routes/LoanData.js';
+import EarthQuake from './routes/EarthQuake';
 import {
   Link,
 } from "react-router-dom";
@@ -11,8 +12,9 @@ import {
 
 function App() {
   const [navLinks] = useState([
-    { url: '/stores', name: "Lowe's stores" },
+    { url: '/stores', name: "stores Location" },
     { url: '/loan-data', name: 'Loan Data' },
+    { url: '/earthquake', name: 'Earth Quake Graph' },
   ]);
   return (
     <div className="App">
@@ -24,14 +26,14 @@ function App() {
               <ul>
                 {navLinks.map(({ url, name }) => (
                   <li key={url}>
-                    <li><a href="javascript(0);"><i class="fa fa-home nav-icon"></i><Link to={url}>{name}</Link></a></li>
+                    <li><a href="javascript(0);"><i className="fa fa-home nav-icon"></i><Link to={url}>{name}</Link></a></li>
                   </li>
                 ))}
               </ul>
             </nav>
 
-            <div class="menu-toggle">
-              <div class="hamburger"></div>
+            <div className="menu-toggle">
+              <div className="hamburger"></div>
             </div>
 
           </div>
@@ -39,7 +41,8 @@ function App() {
         <Sidebar />
         <Switch>
           <Route path={`/stores`} exact component={() => <Location />} />
-          <Route path={`/loan-data`} exact component={() => <Location1 />} />
+          <Route path={`/loan-data`} exact component={() => <LoanData />} />
+          <Route path={`/earthquake`} exact component={() => <EarthQuake />} />
           <Route path={`/`} component={() => <Location />} />
           <Redirect to="/" />
         </Switch>
